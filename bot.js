@@ -16,8 +16,10 @@ const { Client, GatewayIntentBits } = require('discord.js');
   client.on('messageCreate', (message) => {
     if (message.author.bot) return;
 
-    if (message.content === '!Hallo') {
-      message.reply('Hallo! Willkommen bei Paradise City Roleplay!');
+    const content = message.content.toLowerCase();
+
+    if (content === '!hallo') {
+      message.reply('Hallo! Willkommen bei Paradise City Roleplay! 🌴');
     }
   });
 
